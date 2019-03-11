@@ -10,7 +10,7 @@
 @using (Html.BeginForm("Edit", "ProductManager", FormMethod.Post, new { encType = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Product</h4>
         <hr />
@@ -18,9 +18,10 @@
         @Html.HiddenFor(model => model.Product.Id)
 
         <div class="col-md-2">
-            <img class="img-responsive" src="~/Content/ProductImages/@Model.Product.Image"/>
+            <img class="img-responsive" src="~/Content/ProductImages/@Model.Product.Image" />
         </div>
         <div class="col-md-10">
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Product.Name, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -55,7 +56,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Product.Image, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    <input type="file" id="file" name="'file" class="form-control" />
+                    <input type="file" id="file" name="file" class="form-control" />
                 </div>
             </div>
 
